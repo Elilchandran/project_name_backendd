@@ -1,4 +1,3 @@
-// AuthContext.js
 import React, { useEffect, createContext, useReducer, useContext } from 'react';
 
 const AuthContext = createContext();
@@ -30,8 +29,8 @@ const authReducer = (state, action) => {
         ...state,
         isAuthenticated: true,
         user: {
-          ...action.payload, // Include user data like name, email, etc.
-          email: action.payload.email, // Change 'userId' to 'email'
+          ...action.payload, // Including user data like name, email, etc.
+          email: action.payload.email, // Changing 'userId' to 'email'
         },
       };
     case 'LOGOUT':

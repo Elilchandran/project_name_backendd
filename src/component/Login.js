@@ -17,7 +17,6 @@ const Login = () => {
       if (response.status === 200) {
         const { message, tasks } = response.data;
         dispatch({ type: 'LOGIN', payload: { email, tasks } });
-        console.log(message); // You can show a success message or redirect to another page
         navigate('/dashboard');
       } else {
         console.error('Invalid email or password');
@@ -71,9 +70,9 @@ const Login = () => {
                           <label htmlFor="inputPassword">Password</label>
                         </div>
                         <div className="d-flex align-items-center justify-content-between mt-4 mb-0">
-                          <Link className="small" to="/forgetps">
+                         /* <Link className="small" to="/forgetps">
                             Forgot Password?
-                          </Link>
+                          </Link>*/
                           <button type="submit" className="btn btn-primary">
                             Login
                           </button>
@@ -82,10 +81,10 @@ const Login = () => {
                     </div>
                     <div className="card-footer text-center py-3">
                     <div className="large" style={{ fontSize: '1.2em' }}>
-  <Link to="/register" className="small">
-    New User Sign up!
-  </Link>
-</div>
+                       <Link to="/register" className="small">
+                        New User Sign up!
+                      </Link>
+                  </div>
 
                     </div>
                   </div>
@@ -115,5 +114,3 @@ const Login = () => {
 
 export default Login;
 
-// Other components like TaskSubmission, Task, etc.
-// ...

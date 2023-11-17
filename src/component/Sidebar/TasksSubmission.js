@@ -6,7 +6,7 @@ const TaskSubmission = () => {
   const [newTask, setNewTask] = useState({
     taskName: '',
     description: '',
-    status: '', // Update the status field to be 'SUBMITTED TASK' upon submission
+    status: '', 
     completedOn: '',
     link: '',
   });
@@ -27,7 +27,6 @@ const TaskSubmission = () => {
 
         if (response.status === 200) {
           console.log('Task submitted:', response.data.task);
-          // Add the submitted task to the UI if needed
         } else {
           console.error('Task submission failed');
         }

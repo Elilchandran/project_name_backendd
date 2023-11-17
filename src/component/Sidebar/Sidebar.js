@@ -10,7 +10,7 @@ function Sidebar() {
   const isExcludedPage = excludedPaths.includes(location.pathname);
 
   if (isExcludedPage) {
-    return null; // Don't render the Sidebar on the excluded pages
+    return null; 
   }
 
   return (

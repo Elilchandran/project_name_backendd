@@ -55,7 +55,7 @@ function DoughnutChart({ tasks }) {
       <div className="card-body" style={{ height: '400px' }}>
         <canvas ref={chartRef} id="doughnutChart"></canvas>
       </div>
-      <div className="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+      <div className="card-footer small text-muted">Updated Chart</div>
     </div>
   );
 }

@@ -70,9 +70,9 @@ const Login = () => {
                           <label htmlFor="inputPassword">Password</label>
                         </div>
                         <div className="d-flex align-items-center justify-content-between mt-4 mb-0">
-                         /* <Link className="small" to="/forgetps">
+                              {/* <Link className="small" to="/forgetps">
                             Forgot Password?
-                          </Link>*/
+                          </Link>*/}
                           <button type="submit" className="btn btn-primary">
                             Login
                           </button>

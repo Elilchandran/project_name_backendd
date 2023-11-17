@@ -2,22 +2,22 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faUser, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { Link, useLocation } from 'react-router-dom';
-import { useAuth } from './AuthContext'; // Import the useAuth hook
+import { useAuth } from './AuthContext'; 
 
 function NavBar({ toggleSidebar}) {
   const location = useLocation();
-  const { dispatch } = useAuth(); // Use the dispatch function from the AuthContext
+  const { dispatch } = useAuth(); 
 
   const excludedPaths = ['/login', '/register', '/forgetps'];
   const isExcludedPage = excludedPaths.includes(location.pathname);
   
   const handleLogout = () => {
-    dispatch({ type: 'LOGOUT' }); // Dispatch the 'LOGOUT' action to update the state
+    dispatch({ type: 'LOGOUT' }); 
   };
 
 
   if (isExcludedPage) {
-    return null; // Don't render the Sidebar on the excluded pages
+    return null; 
   }
   return (
     <nav className="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -70,11 +70,11 @@ function NavBar({ toggleSidebar}) {
                 Settings
               </a>
             </li> */}
-            <li>
+  {/* <li>
               <a className="dropdown-item" href="javascriptvoid(0)">
                 Activity Log
               </a>
-            </li>
+            </li>*/}
             <li>
               <hr className="dropdown-divider" />
             </li>
